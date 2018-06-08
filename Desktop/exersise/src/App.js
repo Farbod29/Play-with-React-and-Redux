@@ -83,7 +83,7 @@ class App extends Component {
 
             <div className={"App"}>
                 <div className={"bg"}>
-                    <div className="content">
+                    <div className="bg">
                         <div className="person">{persons}</div>
                         <h3>My Udemy Exersice </h3>
                         <ButtonToolbar>
