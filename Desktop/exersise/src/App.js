@@ -1,18 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
-//import Teacher from "./Teacher/Teacher";
+// import Teacher from "./Teacher/Teacher";
 import Person from './Person/Person';
-import BackgroundPhoto from './BackgroundPhoto/BackgroundPhoto';
+//import BackgroundPhoto from './BackgroundPhoto/BackgroundPhoto';
 import {Button, ButtonToolbar} from 'react-bootstrap'
 
 class App extends Component {
-    // constructor() {
-    //     super();
-    //     this.state = {
-    //
-    //     }
-    // }
-
     state = {
         persons:
             [
@@ -22,28 +15,52 @@ class App extends Component {
             ],
         teacher: {title: "Dr."},
         showPersons: false
-
     };
 
     deletepersonHandler = (personIndex) => {
-        //const persons = this.state.persons.slice();
+        // const persons = this.state.persons.slice();
         const persons = [...this.state.persons];
         persons.splice(personIndex, 1);
         this.setState({persons: persons});
-        console.log('sossis bandari were clickd');
+        console.log('sossis bandari were clicked');
     };
 
-    nameChangedHandler = (event) => {
-        this.setState({
-            persons:
-                [
-                    {name: 'mardo', age: event.target.value},
-                    {name: 'golikonde', age: 51},
-                    {name: event.target.value, age: 11}
-                ],
-            // teacher: {title: "SIIIKL kirii."}
-        })
+    nameChangedHandler = (event, id) => {
+
+        const personindex = this.state.persons.findIndex(p => {
+            return p.id === id;
+        });
+
+        const person = {...this.state.persons[personindex]};
+
+        person.name = event.target.value;
+        person.age = 31;
+        const persons = [...this.state.persons];
+
+        persons[personindex] = person;
+        this.setState({persons: persons});
     };
+
+    // ---------------------------// ostaad version //-------------------------------//
+    //
+    // nameChangedHandler = ( event, id ) => {
+    //     const personIndex = this.state.persons.findIndex(p => {
+    //         return p.id === id;
+    //     });
+    //
+    //     const person = {
+    //         ...this.state.persons[personIndex]
+    //     };
+    //     // const person = Object.assign({}, this.state.persons[personIndex]);
+    //
+    //     person.name = event.target.value;
+    //
+    //     const persons = [...this.state.persons];
+    //     persons[personIndex] = person;
+    //
+    //     this.setState( {persons: persons} );
+    // };
+    // ---------------------------// ostaad version //-------------------------------//
 
     togglePersonsHandler = () => {
         console.log("fesharbede too!");
@@ -70,6 +87,7 @@ class App extends Component {
                                     name={person.name}
                                     age={person.age}
                                     key={person.id}
+                                    changed={(event) => this.nameChangedHandler(event, person.id)}
                                     // click={this.onSwitchHandler.bind(this, 'hala mah shodam')}
                                 />
                             )
