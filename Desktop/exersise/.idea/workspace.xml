@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c0e4d44-a560-44ab-97b4-7e84147538f8" name="Default" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$APPLICATION_CONFIG_DIR$/options/notifications.xml" afterDir="false" />
+=======
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BackgroundPhoto/BackgroundPhoto.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/BackgroundPhoto/BackgroundPhoto.js" afterDir="false" />
@@ -22,8 +25,13 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="161">
               <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+=======
+            <state relative-caret-position="182">
+              <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
                 <marker date="1528897024382" expanded="false" signature="63:103" ph="..." />
@@ -284,7 +292,11 @@
       <workItem from="1527783881811" duration="21271000" />
       <workItem from="1528027551943" duration="26077000" />
       <workItem from="1528388083833" duration="1067000" />
+<<<<<<< Updated upstream
       <workItem from="1528390133370" duration="33869000" />
+=======
+      <workItem from="1528390133370" duration="36864000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="just adjust css part for Bg">
       <created>1528499824378</created>
@@ -293,11 +305,22 @@
       <option name="project" value="LOCAL" />
       <updated>1528499824378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix persons bug">
+      <created>1528900980363</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528900980363</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="85175000" />
+=======
+    <option name="totallyTimeSpent" value="88170000" />
+>>>>>>> Stashed changes
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -312,7 +335,7 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1761804" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1726568" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4989429" weight="0.0798005" />
       <window_info anchor="bottom" id="Docker" order="7" sideWeight="0.49964765" weight="0.32917705" />
       <window_info anchor="bottom" x="988" y="620" width="255" height="185" id="Event Log" order="10" sideWeight="0.18040873" side_tool="true" type="WINDOWED" weight="0.23067331" />
@@ -321,7 +344,11 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+<<<<<<< Updated upstream
       <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.8195913" visible="true" weight="0.37516513" />
+=======
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.8195913" visible="true" weight="0.48348746" />
+>>>>>>> Stashed changes
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -386,7 +413,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="just adjust css part for Bg" />
-    <option name="LAST_COMMIT_MESSAGE" value="just adjust css part for Bg" />
+    <MESSAGE value="fix persons bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix persons bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -727,8 +755,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="161">
           <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+=======
+        <state relative-caret-position="182">
+          <caret line="40" column="40" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
+>>>>>>> Stashed changes
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <marker date="1528897024382" expanded="false" signature="63:103" ph="..." />

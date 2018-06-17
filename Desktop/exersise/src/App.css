@@ -6,6 +6,7 @@
     margin-bottom: 1000px;
     margin-left: 100px;
     padding-bottom: 34px;
+    margin-top: 160px;
 }
 .app {
     position: relative;
@@ -57,6 +58,13 @@
 
 }
 .bg {
+}
+.red{
+    background-color: red ;
+}
+.bold
+{
+    font-weight: bold;
 }
 /*.background-image {*/
     /*position: fixed;*/

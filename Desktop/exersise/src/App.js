@@ -3,7 +3,10 @@ import './App.css';
 // import Teacher from "./Teacher/Teacher";
 import Person from './Person/Person';
 //import BackgroundPhoto from './BackgroundPhoto/BackgroundPhoto';
-import {Button, ButtonToolbar} from 'react-bootstrap'
+//import {Button, ButtonToolbar} from 'react-bootstrap'
+import './App.css';
+import Radium, { StyleRoot } from 'radium';
+
 
 class App extends Component {
     state = {
@@ -17,78 +20,86 @@ class App extends Component {
         showPersons: false
     };
 
+    // deletepersonHandler = (personIndex) => {
+    //     const persons = [...this.state.persons];
+    //     persons.splice(personIndex,1);
+    //     this.setState({persons : persons});
+    //     console.log('sossis bandari were clicked');
+    // };
+
     deletepersonHandler = (personIndex) => {
-        // const persons = this.state.persons.slice();
         const persons = [...this.state.persons];
-        persons.splice(personIndex, 1);
+        persons.splice(personIndex, 1); // chand ta roo kam mikone = 1
         this.setState({persons: persons});
         console.log('sossis bandari were clicked');
     };
 
     nameChangedHandler = (event, id) => {
-
-        const personindex = this.state.persons.findIndex(p => {
+        const personIndex = this.state.persons.findIndex(p => {
             return p.id === id;
         });
-
-        const person = {...this.state.persons[personindex]};
-
+        const person = {
+            ...this.state.persons[personIndex]
+        };
         person.name = event.target.value;
-        person.age = 31;
         const persons = [...this.state.persons];
-
-        persons[personindex] = person;
+        persons[personIndex] = person;
         this.setState({persons: persons});
     };
 
     // ---------------------------// ostaad version //-------------------------------//
-    //
-    // nameChangedHandler = ( event, id ) => {
-    //     const personIndex = this.state.persons.findIndex(p => {
-    //         return p.id === id;
-    //     });
-    //
-    //     const person = {
-    //         ...this.state.persons[personIndex]
-    //     };
-    //     // const person = Object.assign({}, this.state.persons[personIndex]);
-    //
-    //     person.name = event.target.value;
-    //
-    //     const persons = [...this.state.persons];
-    //     persons[personIndex] = person;
-    //
-    //     this.setState( {persons: persons} );
-    // };
-    // ---------------------------// ostaad version //-------------------------------//
-
     togglePersonsHandler = () => {
-        console.log("fesharbede too!");
-        const doesShow = this.state.showPersons;
-        this.setState({showPersons: !doesShow});
+        const show = this.state.showPersons;
+        this.setState({showPersons: !show});
     };
 
     render() {
-        // let styles2 = {
-        //     margin: '10px',
-        //     backgroundColor: 'gray',
-        //     display: 'inline-block',
-        // };
-        let persons = null;
-        if (this.state.showPersons) {
+        const Style = {
+            backgroundColor: 'green',
+            color: 'white',
+            font: 'inherit',
+            border: '1px solid blue',
+            padding: '8px',
+            cursor: 'pointer',
+            ':hover': {
+                backgroundColor: 'lightgreen',
+                color: 'black'
+            }
+        };
+            let styles2 = {
+            margin: '10px',
+            backgroundColor: 'gray',
+            display: 'inline-block',
+            color: 'red',
+            cursor: 'pointer',
+            ':hover': {
+                backgroundColor: 'lightgreen',
+                color: 'black'
+            }
 
+        };
+        let persons = null;
+
+        if (this.state.showPersons) {
+            Style.backgroundColor = 'green';
+            Style[':hover'] = {
+                backgroundColor: 'lightred',
+                color: 'black'
+            };
             persons = (
                 <div>
                     {
                         this.state.persons.map((person, index) => {
-                            return (<Person
+                            return (
+                                <Person
+                                    style={styles2}
                                     // changed={this.nameChangedHandler()}
                                     click={() => this.deletepersonHandler(index)}
                                     name={person.name}
                                     age={person.age}
                                     key={person.id}
                                     changed={(event) => this.nameChangedHandler(event, person.id)}
-                                    // click={this.onSwitchHandler.bind(this, 'hala mah shodam')}
+                                    //click={this.onSwitchHandler.bind(this, 'hala mah shodam')}
                                 />
                             )
                         })
@@ -97,19 +108,31 @@ class App extends Component {
 
             );
         }
+
+        let classes = [];
+        if (this.state.persons.length <= 2) {
+            classes.push('red'); // classes = ['red']
+        }
+        if (this.state.persons.length <= 1) {
+            classes.push('bold'); // classes = ['red', 'bold']
+        }
+
+
         return (
 
             <div className={"App"}>
                 <div className={"bg"}>
                     <div className="bg">
                         <div className="person">{persons}</div>
-                        <h3>My Udemy Exersice </h3>
-                        <ButtonToolbar>
-                            <Button bsStyle="primary" bsSize="large" active onClick={this.togglePersonsHandler}>
+                        <h3 className={classes.join(' ')}>My Udemy Exersice </h3>
+                        {/*<ButtonToolbar>*/}
+                            <button style={Style} active onClick={this.togglePersonsHandler}>
+                                {/*btStyle={'primary'}*/}
                                 Toggle Persons
-                            </Button>
-                        </ButtonToolbar>
-                        <p>Fusce ut placerat eros. Aliquam consequat in augue sed convallis. Donec orci urna, tincidunt
+                            </button>
+                        {/*</ButtonToolbar>*/}
+                        <p className={classes.join(' ')}>Fusce ut placerat eros. Aliquam consequat in augue sed
+                            convallis. Donec orci urna, tincidunt
                             vel dui at, elementum semper dolor. Donec tincidunt risus sed magna dictum, quis luctus
                             metus volutpat. Donec accumsan et nunc vulputate accumsan. Vestibulum tempor, erat in mattis
                             fringilla, elit urna ornare nunc, vel pretium elit sem quis orci. Vivamus condimentum dictum
@@ -122,4 +145,4 @@ class App extends Component {
     };
 }
 
-export default App;
+export default Radium(App);

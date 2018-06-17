@@ -1,6 +1,7 @@
 import React from "react";
 // import {IndexLink, Link} from "react-router";
 import './person.css';
+import Radium from 'radium';
 
 const Person = (props) =>
 {
@@ -14,6 +15,6 @@ const Person = (props) =>
     )
 };
 
-export default Person;
+export default Radium(Person);
 
 
