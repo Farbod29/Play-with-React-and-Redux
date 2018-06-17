@@ -5,7 +5,7 @@ import Person from './Person/Person';
 //import BackgroundPhoto from './BackgroundPhoto/BackgroundPhoto';
 //import {Button, ButtonToolbar} from 'react-bootstrap'
 import './App.css';
-import Radium, { StyleRoot } from 'radium';
+import Radium from 'radium';
 
 
 class App extends Component {
@@ -54,7 +54,7 @@ class App extends Component {
     };
 
     render() {
-        const Style = {
+        const Button_Style = {
             backgroundColor: 'green',
             color: 'white',
             font: 'inherit',
@@ -66,24 +66,20 @@ class App extends Component {
                 color: 'black'
             }
         };
-            let styles2 = {
+            let Person_Style = {
             margin: '10px',
             backgroundColor: 'gray',
             display: 'inline-block',
             color: 'red',
             cursor: 'pointer',
-            ':hover': {
-                backgroundColor: 'lightgreen',
-                color: 'black'
-            }
 
         };
         let persons = null;
 
         if (this.state.showPersons) {
-            Style.backgroundColor = 'green';
-            Style[':hover'] = {
-                backgroundColor: 'lightred',
+            Button_Style.backgroundColor = 'red';
+            Button_Style[':hover'] = {
+                backgroundColor: 'lightgred',
                 color: 'black'
             };
             persons = (
@@ -92,7 +88,7 @@ class App extends Component {
                         this.state.persons.map((person, index) => {
                             return (
                                 <Person
-                                    style={styles2}
+                                    style={Person_Style}
                                     // changed={this.nameChangedHandler()}
                                     click={() => this.deletepersonHandler(index)}
                                     name={person.name}
@@ -126,7 +122,7 @@ class App extends Component {
                         <div className="person">{persons}</div>
                         <h3 className={classes.join(' ')}>My Udemy Exersice </h3>
                         {/*<ButtonToolbar>*/}
-                            <button style={Style} active onClick={this.togglePersonsHandler}>
+                            <button style={Button_Style} active onClick={this.togglePersonsHandler}>
                                 {/*btStyle={'primary'}*/}
                                 Toggle Persons
                             </button>
