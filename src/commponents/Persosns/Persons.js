@@ -16,4 +16,3 @@ const Persons = (props) => props.persons.map((person, index) => {
 
 
 export default Persons;
-

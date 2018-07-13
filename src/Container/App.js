@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
 // import Teacher from "./Teacher/Teacher";
-//import {Button, ButtonToolbar} from 'react-bootstrap'
-import './App.css';
 import Radium, {StyleRoot} from 'radium';
 import Persons from "../commponents/Persosns/Persons";
+import Cockpit from "../commponents/Cockpit/Cockpit"
 
 class App extends Component {
     state = {
@@ -18,6 +17,8 @@ class App extends Component {
         showPersons: false
     };
 
+
+
     deletepersonHandler = (personIndex) => {
         const persons = [...this.state.persons];
         persons.splice(personIndex, 1); // chand ta roo kam mikone = 1
@@ -29,9 +30,7 @@ class App extends Component {
         const personIndex = this.state.persons.findIndex(p => {
             return p.id === id;
         });
-        const person = {
-            ...this.state.persons[personIndex]
-        };
+        const person = {...this.state.persons[personIndex]};
         person.name = event.target.value;
         const persons = [...this.state.persons];
         persons[personIndex] = person;
@@ -43,8 +42,9 @@ class App extends Component {
         this.setState({showPersons: !show});
     };
 
+
     render() {
-        const Button_Style = {
+        let Button_Style = {
             position: 'auto',
             backgroundColor: 'green',
             color: 'white',
@@ -58,7 +58,6 @@ class App extends Component {
             }
         };
         let persons = null;
-
         if (this.state.showPersons) {
             persons = (
                 <div>
@@ -75,29 +74,15 @@ class App extends Component {
                 color: 'black'
             };
         }
-
-        let classes = [];
-        if (this.state.persons.length <= 2) {
-            classes.push('red'); // classes = ['red']
-        }
-        if (this.state.persons.length <= 1) {
-            classes.push('bold'); // classes = ['red', 'bold']
-        }
-
         return (
             <StyleRoot>
-                <div className={"bg"}>
-                    <div>
-                        <h3 className={classes.join(' ')}> My Udemy Exersice </h3>
-                        <button style={Button_Style} onClick={this.togglePersonsHandler}>
-                            Toggle Persons
-                        </button>
-                        <p className={classes.join(' ')}>Fusce ut placerat eros. Aliquam consequat in augue sed
-                            convallis. Donec orci urna, tincidunt
-                        </p>
+                        <Cockpit
+                            showPersons={this.state.showPersons}
+                            clicked={this.togglePersonsHandler}
+                            persons={this.state.persons}
+                        />
+
                         <div>{persons}</div>
-                    </div>
-                </div>
             </StyleRoot>
         );
     };
