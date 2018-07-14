@@ -1,6 +1,6 @@
 import React from "react";
 import "./Cockpit.css"
-import {Button, ButtonToolbar} from 'react-bootstrap';
+
 const cockpit = (props) => {
 
 
@@ -27,7 +27,7 @@ const cockpit = (props) => {
     }
     return (
         <div className={"classes.Cockpit"}>
-            <div className={"bg"}>
+            {/*<div className={"bg"}>*/}
                 <h3 className={classes.join(' ')}> My Udemy Exersice </h3>
                 <button style={Button_Style} onClick={props.clicked}>
                     Toggle Persons
@@ -35,10 +35,37 @@ const cockpit = (props) => {
                 <p className={classes.join(' ')}>Fusce ut placerat eros. Aliquam consequat in augue sed
                     convallis. Donec orci urna, tincidunt
                 </p>
-            </div>
+            {/*</div>*/}
         </div>
     );
 };
 
 export default cockpit;
 
+
+// import React from 'react';
+// import classes from './Cockpit.css';
+// import {Button, ButtonToolbar} from 'react-bootstrap';
+//
+// const cockpit = ( props ) => {
+//
+//     let classes = [];
+//     if (props.persons.length <= 2) {
+//         classes.push('red'); // classes = ['red']
+//     }
+//     if (props.persons.length <= 1) {
+//         classes.push('bold'); // classes = ['red', 'bold']
+//     }
+//
+//     return (
+//         <div className={"classes.Cockpit"}>
+//             <h1>{ props.appTitle }</h1>
+//             <p className={classes.join( ' ' )}>This is really working!</p>
+//             <button
+//                 className={"btnClass"}
+//                 onClick={props.clicked}>Toggle Persons</button>
+//         </div>
+//     );
+// };
+//
+// export default cockpit;

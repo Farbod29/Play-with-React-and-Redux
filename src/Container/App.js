@@ -17,8 +17,6 @@ class App extends Component {
         showPersons: false
     };
 
-
-
     deletepersonHandler = (personIndex) => {
         const persons = [...this.state.persons];
         persons.splice(personIndex, 1); // chand ta roo kam mikone = 1
@@ -42,21 +40,7 @@ class App extends Component {
         this.setState({showPersons: !show});
     };
 
-
     render() {
-        let Button_Style = {
-            position: 'auto',
-            backgroundColor: 'green',
-            color: 'white',
-            font: 'inherit',
-            border: '1px solid blue',
-            padding: '8px',
-            cursor: 'pointer',
-            ':hover': {
-                backgroundColor: 'lightgreen',
-                color: 'black'
-            }
-        };
         let persons = null;
         if (this.state.showPersons) {
             persons = (
@@ -68,21 +52,17 @@ class App extends Component {
                     />
                 </div>
             );
-            Button_Style.backgroundColor = 'red';
-            Button_Style[':hover'] = {
-                backgroundColor: 'pink',
-                color: 'black'
-            };
         }
         return (
             <StyleRoot>
-                        <Cockpit
-                            showPersons={this.state.showPersons}
-                            clicked={this.togglePersonsHandler}
-                            persons={this.state.persons}
-                        />
-
-                        <div>{persons}</div>
+                <div className={"bg222"}>
+                    <Cockpit
+                             showPersons={this.state.showPersons}
+                             clicked={this.togglePersonsHandler}
+                             persons={this.state.persons}
+                    />
+                    <div>{persons}</div>
+                </div>
             </StyleRoot>
         );
     };

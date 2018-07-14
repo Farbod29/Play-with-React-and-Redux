@@ -4,3 +4,31 @@
     max-width: 400px;
     background-color: #f56b10;
 }
+
+.bg222{
+
+    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg');*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #2ac8e5;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+
+}
