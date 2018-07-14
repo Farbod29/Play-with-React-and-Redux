@@ -1,19 +1,47 @@
-.btStyle
-{
-    position: absolute;
-    transform: translate(-30%, -30%);
-    -ms-transform: translate(-30%, -30%);
-    margin-bottom: 1000px;
-    margin-left: 100px;
-    padding-bottom: 34px;
-    margin-top: 160px;
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
-.app {
-    position: relative;
-    width: 100%;
-    max-width: 400px;
-    background-color: #f56b10;
+
+.button1 {
+    background-color: #2679cc;
+    color: black;
+    border: 2px solid #273caf;
 }
+
+.button1:hover {
+    background-color: #9fbdff;
+    color: white;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+/*.app {*/
+/*position: relative;*/
+/*width: 100%;*/
+/*max-width: 400px;*/
+/*background-color: #f56b10;*/
+/*}*/
+
 .person {
     margin-top: 40px;
     position: absolute;
@@ -33,44 +61,46 @@
 
 .bg {
 }
-.red{
-    background-color: red ;
-}
-.bold
-{
-    font-weight: bold;
-}
-/*!* jadiiiiid */
+
 .red {
-    color: red;
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-
-  .Cockpit button {
-    border: 1px solid blue;
-    padding: 16px;
-    background-color: green;
-    font: inherit;
-    color: white;
-    cursor: pointer;
-  }
-
-  .Cockpit button:hover {
-    background-color: lightgreen;
-    color: black;
-  }
-
-  .Cockpit button.Red {
     background-color: red;
-  }
+}
 
-  .Cockpit button.Red:hover {
-    background-color: salmon;
-    color: black;
-  }
+.bold {
+    font-weight: bold;
+}
+
+/*!* jadiiiiid */
+/*.red {*/
+/*color: red;*/
+/*}*/
+
+/*.bold {*/
+/*font-weight: bold;*/
+/*}*/
+
+/*.Cockpit button {*/
+/*border: 1px solid blue;*/
+/*padding: 16px;*/
+/*background-color: green;*/
+/*font: inherit;*/
+/*color: white;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*.Cockpit button:hover {*/
+/*background-color: lightgreen;*/
+/*color: black;*/
+/*}*/
+
+/*.Cockpit button.Red {*/
+/*background-color: red;*/
+/*}*/
+
+/*.Cockpit button.Red:hover {*/
+/*background-color: salmon;*/
+/*color: black;*/
+/*}*/
 
 /*.btStyle {*/
 
@@ -90,11 +120,9 @@
 
 /*',*/
 /*hover: {*/
-    /*backgroundColor: lightgreen,*/
-    /*color: black*/
+/*backgroundColor: lightgreen,*/
+/*color: black*/
 /*}*/
-
-
 
 /*.background-image {*/
 /*position: fixed;*/
@@ -103,7 +131,7 @@
 /*z-index: 1;*/
 
 /*display: block;*/
-/*background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');*/
+/*background-image: url('http:666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');*/
 /*width: 1200px;*/
 /*height: 800px;*/
 
@@ -122,7 +150,7 @@
 /*z-index: -1;*/
 
 /*display: block;*/
-/*background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg');*/
+/*background-image: url('https:mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg');*/
 /*width: 1200px;*/
 /*height: 800px;*/
 
